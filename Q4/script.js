@@ -2,6 +2,7 @@ window.onload = function(){
     const state = {
         index : 1,
         fontSize : 15, 
+        value : 2,
     }
     const getString = function(a,i){
         return `${a} X ${i} = ${a*i}`;
@@ -12,7 +13,14 @@ window.onload = function(){
         div.innerText = getString(n,i);
         div.style.color = rgb;
         div.style.fontSize = `${fontSize}px`;
-        console.log(div);
+        // console.log(div);
+        return div;
+    }
+    const getCardHead = function(value){
+        let div = document.createElement('div');
+        div.classList.add('cardHead');
+        div.innerText = `Table of ${value}`
+        // console.log(div);
         return div;
     }
     const getRandomRgb = function(){
@@ -24,10 +32,12 @@ window.onload = function(){
 
     setInterval(()=>{
         if(state.index>10){
-            return;
+            state.value+=1;
+            state.index=1;
         }
-        let randomRGB = getRandomRgb();
-        document.getElementsByTagName('main')[0].appendChild(getCardDiv(2,state.index,randomRGB,state.fontSize))
+        const randomRGB = getRandomRgb();
+        if(state.index==1) document.getElementsByTagName('main')[0].appendChild(getCardHead(state.value))
+        document.getElementsByTagName('main')[0].appendChild(getCardDiv(state.value,state.index,randomRGB,state.fontSize))
         // console.log(document.getElementsByTagName('main')[0]);
         state.index+=1;
         // state.fontSize+=0.5;

@@ -30,7 +30,7 @@
 .pet-form{
     padding-top: 30px;
     width: 40%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -47,24 +47,27 @@
 .text1{
     width: 90%;
     /* margin: auto; */
-    font:1em sans-serif;
+    font:0.8em sans-serif;
     font-weight: bold;
+    color: #323232;
     /* border: 1px solid black; */
     
 }
-input{
-    margin-bottom: 10px;
+.input{
+    margin-bottom: 7px;
     width: 90%;
     height: 8%;
     border-radius: 5px;
     border: none;
     background-color: #ececec;
     padding-left: 10px;
-    transition: all 0.3s ease-in-out;
-    
+    transition: all 0.2s ease-in-out;
+    outline: none;
 }
 input:focus{
-    box-shadow: 0px 0px 2px 2px #8cc0fa;
+    box-shadow: 0px 0px 3px 3px #8cc0fa;
+    /* border-bottom: 2px solid blue; */
+    /* box-shadow: 0px 0px 3px 3px #ececec; */
     background-color: #FFFF;
     outline: none;
 }
@@ -76,13 +79,15 @@ input:focus{
         width: 100%;
     }
     .pet-form{
-        width: 50%;
-        height: 45%;
+        width: 60%;
+        height: 48%;
+        min-height: 500px;
     }
 }
 button{
-    width: 30%;
-    height: 8%;
+    margin: auto;
+    width: 27%;
+    height: 7%;
     border: none;
     border-radius: 5px;
     color:#ffff;
@@ -90,4 +95,8 @@ button{
 }
 button:hover{
     cursor: pointer;
+}
+.btn2{
+    color: black;
+    background:linear-gradient(45deg,#ebebeb , #ececec);
 }
