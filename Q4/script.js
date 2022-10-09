@@ -40,7 +40,7 @@ window.onload = function(){
         document.getElementsByTagName('main')[0].appendChild(getCardDiv(state.value,state.index,randomRGB,state.fontSize))
         // console.log(document.getElementsByTagName('main')[0]);
         state.index+=1;
-        // state.fontSize+=0.5;
+        state.fontSize+=0.5;
         console.log(state);
     },1000)
     
